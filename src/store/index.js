@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     isLoggedIn: false,
     count: null,
-    news: []
+    news: [],
+    error: null;
   },
   getters: {
     totalCount: (state) => state.count,
@@ -17,6 +18,7 @@ export default new Vuex.Store({
   mutations: {
     setNews: (state, data) => (state.news = state.news.concat(data)),
     setCount: (state, count) => (state.count = count),
+    setError: (state, error) => (state.error = error),
     setLoggedIn: (state, bool) => {
       return state.isLoggedIn = bool
     }
@@ -42,7 +44,8 @@ export default new Vuex.Store({
           // resolve();
         })
         .catch(err => {
-          console.log(err.response || err);
+          commit('setError', err.response || err)
+          // console.log(err.response || err);
           // reject(err)
         })
 
