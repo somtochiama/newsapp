@@ -1,7 +1,7 @@
 <template>
 <div class="form__wrapper">
     <form @submit.prevent="loginUser" class="form">
-        <h1 class="form__header">LOGIN</h1>
+        <h1 class="form__header">LOGIN TO VIEW TIMELINE</h1>
         <div class="form__item">
             <input type="text" name="email" id="email" v-model="email" placeholder="Enter Email" required>
         </div>
