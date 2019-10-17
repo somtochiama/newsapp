@@ -9,7 +9,7 @@ export default new Vuex.Store({
     isLoggedIn: false,
     count: null,
     news: [],
-    error: null;
+    error: null
   },
   getters: {
     totalCount: (state) => state.count,
