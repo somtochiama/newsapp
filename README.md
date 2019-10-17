@@ -5,6 +5,12 @@
 npm install
 ```
 
+Also set up your .env file with your api_key
+
+```
+VUE_API_API_KEY=[your api key]
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
