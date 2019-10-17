@@ -4,7 +4,7 @@
       <router-link to="/" exact>Home</router-link>
       <router-link to="/timeline">Timeline</router-link>
       <router-link v-if="!loggedIn" to="/login">Login</router-link> 
-      <button v-else @click="logout">Logout</button>
+      <a v-else @click.prevent="logout">Logout</a>
     </div>
     <router-view/>
   </div>

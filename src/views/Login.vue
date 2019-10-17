@@ -37,7 +37,7 @@ export default {
                 this.$store.commit('setLoggedIn', true)
                 this.$router.push({ name: 'timeline'})
                 this.loading = false
-            }, 3000)
+            }, 1500)
         }
     }
 }
